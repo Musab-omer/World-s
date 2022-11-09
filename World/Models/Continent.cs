@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace World.Models
 {
-    public class Contient
+    public class Continent
     {
         public Guid Id { get; set; }
         public string EName { get; set; }

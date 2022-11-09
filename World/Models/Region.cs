@@ -12,6 +12,6 @@ namespace World.Models
         public string EName { get; set; }
         public string AName { get; set; }
         public Guid ContientId { get; set; }
-        public Contient Contient { get; set; }
+        public Continent Contient { get; set; }
     }
 }
