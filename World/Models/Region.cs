@@ -8,10 +8,10 @@ namespace World.Models
 {
     public class Region
     {
-        public Guid Id { get; set; }
+        public int Id { get; set; }
         public string EName { get; set; }
         public string AName { get; set; }
-        public Guid ContientId { get; set; }
+        public int ContientId { get; set; }
         public Continent Contient { get; set; }
     }
 }
