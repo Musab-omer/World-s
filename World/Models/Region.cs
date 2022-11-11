@@ -12,7 +12,7 @@ namespace World.Models
         public string EName { get; set; }
         public string AName { get; set; }
         public int ContinentId { get; set; }
-        public Continent Contient { get; set; }
+        public Continent Continent { get; set; }
         public List<Country> Countries { get; set; }
     }
 }
