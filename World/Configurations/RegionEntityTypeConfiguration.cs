@@ -13,9 +13,6 @@ namespace World.Configurations
     {
         public void Configure(EntityTypeBuilder<Region> builder)
         {
-            builder.HasOne(c => c.Contient)
-                .WithMany(r => r.Regions);
-
             builder.Property(r=>r.EName).HasColumnName("EnglishName")
                 .HasMaxLength(30)
                 .IsRequired(true);
