@@ -14,18 +14,18 @@ namespace World.Configurations
         public void Configure(EntityTypeBuilder<Continent> builder)
         {
             builder.HasMany(c => c.Regions)
-                .WithOne(r => r.Contient);
+                .WithOne(r => r.Continent);
 
             builder.Property(c => c.EName).HasColumnName("EnglishName").HasMaxLength(30).IsRequired(true);
             builder.Property(c => c.AName).HasColumnName("ArabicName").HasMaxLength(30).IsRequired(false);
 
-            builder.HasData(new Continent { Id = Guid.NewGuid(), EName = "Asia" },
-                new Continent { Id = Guid.NewGuid(), EName = "Africa" },
-                new Continent { Id = Guid.NewGuid(), EName = "Europe" },
-                new Continent { Id = Guid.NewGuid(), EName = "North America" },
-                new Continent { Id = Guid.NewGuid(), EName = "South America" },
-                new Continent { Id = Guid.NewGuid(), EName = "Australia" },
-                new Continent { Id = Guid.NewGuid(), EName = "Antarctica" });
+            //builder.HasData(new Continent {  EName = "Asia" },
+            //    new Continent {  EName = "Africa" },
+            //    new Continent {  EName = "Europe" },
+            //    new Continent { EName = "North America" },
+            //    new Continent {  EName = "South America" },
+            //    new Continent {  EName = "Australia" },
+            //    new Continent {  EName = "Antarctica" });
         }
     }
 }
