@@ -13,7 +13,9 @@ namespace World
     {
         protected override void OnConfiguring(DbContextOptionsBuilder options)
         {
-            options.UseSqlServer(@"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=WorldDb;Integrated Security=True");
+            //options.UseSqlServer(@"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=WorldDb;Integrated Security=True");
+
+            options.UseSqlServer("Data Source=.;Initial Catalog=WorldDb;User Id=sa;Password=1234;TrustServerCertificate=True");
             options.EnableSensitiveDataLogging(true);
         }
 
@@ -24,6 +26,8 @@ namespace World
             modelBuilder.ApplyConfigurationsFromAssembly(typeof(RegionEntityTypeConfiguration).Assembly);
         }
 
-        public DbSet<Continent> Contients { get; set; }
+        public DbSet<Continent> Continents { get; set; }
+        public DbSet<Region> Regions { get; set; }
+        public DbSet<Country> Countries { get; set; }
     }
 }
