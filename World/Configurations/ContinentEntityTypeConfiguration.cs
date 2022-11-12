@@ -19,13 +19,13 @@ namespace World.Configurations
             builder.Property(c => c.EName).HasColumnName("EnglishName").HasMaxLength(30).IsRequired(true);
             builder.Property(c => c.AName).HasColumnName("ArabicName").HasMaxLength(30).IsRequired(false);
 
-            //builder.HasData(new Continent {  EName = "Asia" },
-            //    new Continent {  EName = "Africa" },
-            //    new Continent {  EName = "Europe" },
-            //    new Continent { EName = "North America" },
-            //    new Continent {  EName = "South America" },
-            //    new Continent {  EName = "Australia" },
-            //    new Continent {  EName = "Antarctica" });
+            //builder.HasData(new Continent { id-1,EName = "Asia" },
+            //    new Continent {id=-2, EName = "Africa" },
+            //    new Continent {id=-3, EName = "Europe" },
+            //    new Continent {id=-4,EName = "North America" },
+            //    new Continent {id=-5, EName = "South America" },
+            //    new Continent { id=-6,EName = "Australia" },
+            //    new Continent { id=-7, EName = "Antarctica" });
         }
     }
 }
