@@ -13,6 +13,8 @@ namespace World.Configurations
     {
         public void Configure(EntityTypeBuilder<Country> builder)
         {
+            builder.HasMany(c => c.States)
+                .WithOne(s => s.Country);
             builder.Property(c => c.EName).HasMaxLength(30)
                 .HasColumnName("EnglishName")
                 .IsRequired(true);
