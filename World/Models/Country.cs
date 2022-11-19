@@ -14,5 +14,6 @@ namespace World.Models
         public char Code { get; set; }
         public int  RegionId { get; set; }
         public Region Region { get; set; }
+        public List<State> States { get; set; }
     }
 }
