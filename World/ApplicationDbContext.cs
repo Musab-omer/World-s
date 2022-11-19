@@ -9,7 +9,7 @@ using World.Models;
 
 namespace World
 {
-    public class ApplicationDbContext:DbContext
+    public class ApplicationDbContext : DbContext
     {
         protected override void OnConfiguring(DbContextOptionsBuilder options)
         {
@@ -24,10 +24,15 @@ namespace World
             modelBuilder.ApplyConfigurationsFromAssembly(typeof(ContinentEntityTypeConfiguration).Assembly);
 
             modelBuilder.ApplyConfigurationsFromAssembly(typeof(RegionEntityTypeConfiguration).Assembly);
+
+            modelBuilder.ApplyConfigurationsFromAssembly(typeof(StateEntityTypeConfiguration).Assembly);
+            modelBuilder.ApplyConfigurationsFromAssembly(typeof(CityEntityTypeConfiguration).Assembly);
         }
 
         public DbSet<Continent> Continents { get; set; }
         public DbSet<Region> Regions { get; set; }
         public DbSet<Country> Countries { get; set; }
+        public DbSet<State> States { get; set; }
+        public DbSet<City> Cities { get; set; }
     }
 }
